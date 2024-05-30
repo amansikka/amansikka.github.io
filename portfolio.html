@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Container</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif; /* Sets a clean, modern font */
+            margin: 0; /* Removes the default margin */
+            background-color: black; /* Sets the background color to black */
+            color: white; /* Sets the text color to white */
+        }
+        .title-header {
+            width: 100%;
+            text-align: center;
+            font-size: 45px; /* Increased font size for the title */
+            margin-bottom: 40px; /* Increased space below the title */
+            padding-top: 20px; /* Adds some space at the top */
+        }
+        .container-wrap {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 40px; /* Keeps a good distance between the containers */
+            padding: 0 20px; /* Padding on the sides to keep content from touching the edges */
+        }
+        .container {
+            width: 350px; /* Consistent container width */
+            border: 1px solid #ccc;
+            padding: 20px;
+            background-color: white; /* Keeps the containers white */
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+            transition: transform 0.3s; /* Smooth transform on hover */
+            color: black; /* Text color inside the containers */
+        }
+        .container:hover {
+            transform: scale(1.05); /* Slightly enlarges the container on hover */
+        }
+        .container img {
+            width: 100%;
+            height: auto;
+        }
+        .title {
+            font-size: 24px; /* Clear, readable title size */
+            color: #333;
+            padding: 8px 0;
+        }
+        .description {
+            font-size: 25px; /* Comfortable text size for reading */
+            color: #666;
+        }
+
+        .back-button {
+            position: absolute; /* Absolute positioning relative to the nearest positioned ancestor (body in this case) */
+            top: 20px; /* Distance from the top */
+            left: 20px; /* Distance from the left */
+            padding: 10px 20px; /* Padding for a better clickable area */
+            background-color: white; /* Background color */
+            color: black; /* Text color */
+            text-decoration: none; /* Removes underline from the link */
+            font-size: 20px; /* Size of the text */
+            border-radius: 5px; /* Rounded corners */
+        }
+
+        .back-button:hover {
+            background-color: #f0f0f0; /* Slightly different background on hover */
+        }
+    </style>
+</head>
+<body>
+    <a href="website.html" class="back-button">←</a>
+    <div class="title-header">Portfolio</div>
+    <div class="container-wrap">
+        <div class="container">
+            <img src="soccer.png" alt="Soccer AI Analysis">
+            <div class="title">Soccer AI Analysis</div>
+            <div class="description">I created a python program that can track a ball, referee, and player given a video.</div>
+        </div>
+        <div class="container">
+            <img src="financellm.png" alt="Finance LLM Project">
+            <div class="title">Finance LLM Project</div>
+            <div class="description">I finetuned a finance LLM from the Claude 3 that can take any financial report and answer a given prompt on it.</div>
+        </div>
+        <div class="container">
+            <img src="tablesasImages.png" alt="LLMs on Tabular Data">
+            <div class="title">LLMs on Tabular Data</div>
+            <div class="description">I contributed to a publication on the strength of LLMs on Tabular Data.</div>
+        </div>
+    </div>
+</body>
+</html>

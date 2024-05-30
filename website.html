@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+
+
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      background-color: black;
+      color: white;
+      font-family: 'Roboto Mono', monospace;
+      margin: 0; /* Remove default margin */
+      padding: 0; /* Remove default padding */
+      text-align: center; /* Center align text */
+    }
+
+    .title {
+    font-size: 36px;
+    font-weight: bold;
+    overflow: hidden;
+    border-right: .15em solid orange;
+    margin-top: 50px;
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: .15em;
+    width: 610px; /* Adjust this value based on your text length */
+    animation:
+      typing 2.5s steps(50, end) forwards,
+      blink-caret .75s step-end infinite;
+    }
+
+/* Animation for typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 10em } /* Adjust to the width of your text */
+}
+
+/* Animation for the blinking cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: white; }
+}
+
+/* Stop the blinking cursor and display it at the end of the text */
+.title::after {
+  content: '';
+  border-right: .15em solid orange;
+  display: inline-block;
+  width: 1ch; /* Typically width of one character */
+  margin-left: -1ch; /* Move the cursor back so it sits at the end of the text */
+  animation: blink-caret .75s step-end infinite;
+}
+
+.title:hover::after {
+  /* Remove the blinking effect on hover, if desired */
+  animation: none;
+}
+
+    .name {
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      font-size: 20px;
+      font-family: 'Roboto Mono', monospace;
+      color: #333;
+    }
+
+    .image {
+      width: 300px; /* Expanded image width */
+      position: absolute;
+      top: 200px;
+      left: 250px; /* Push image to the right */
+    }
+
+    img {
+      width: 100%; /* Make the image fill its container */
+      display: block;
+      border: 1px solid #333;
+      border-radius: 10px; /* Add border radius for a nicer look */
+    }
+
+    .about-me {
+      width: 700px;
+      text-align: left;
+      position: absolute;
+      top: 650px; /* Adjust top position */
+      left: 50%; /* Adjust left position */
+      transform: translateX(-50%);
+      background-color: rgb(0, 0, 0); /* Adjust background color as needed */
+      padding: 20px;
+      border: 2px solid #333; /* Adjust border properties as needed */
+    }
+
+    .about-me h1 {
+      font-size: 24px; /* Adjust font size as needed */
+      margin-bottom: 10px;
+    }
+
+    .additional-section {
+      position: absolute;
+      top: 250px;
+      right: 400px;
+      text-align: center;
+    }
+
+    .section-title {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .sub-title {
+      font-size: 18px;
+    }
+
+    .buttons {
+      margin-top: 40px;
+    }
+
+    .button {
+        display: inline-block;
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        background-color: #333;
+        margin: 0 10px;
+        overflow: hidden;
+    }
+
+    .button img {
+        width: 100%;
+        height: auto;
+    }
+
+    .oval-button {
+        display: inline-block;
+        padding: 15px 60px;
+        border-radius: 50px; /* half of the height */
+        background-color: #333;
+        color: white;
+        text-decoration: none;
+        font-size: 18px;
+        margin-top: 20px;
+    }
+    
+    /* New Section Styles */
+    .section {
+      position: absolute;
+      top: 100px; /* Adjust vertical positioning */
+      width: 100%;
+    }
+
+    .section a {
+      font-size: 18px;
+      margin: 0 50px; /* Increase spacing between links */
+      color: white;
+      text-decoration: none;
+      transition: transform 0.2s;
+    }
+
+    .section a:hover {
+      transform: scale(1.1); /* Scale up on hover */
+    }
+
+    .contact-section {
+      margin-top: 850px; /* Adjust vertical spacing */
+      position: relative; /* Make the position relative for absolute positioning of line */
+    }
+
+    .contact-section::after {
+      content: '';
+      position: absolute;
+      width: calc(100% - 40px); /* Adjust width to ensure the line doesn't overlap with text */
+      top: calc(50% + 120px); /* Adjust top position to ensure the line is below the text */
+      left: 20px; /* Adjust left position to center the line */
+      height: 0.1px; /* Adjust the thickness of the line */
+      background-color: white; /* Color of the dashed line */
+      box-shadow: 
+        0 0 0 6px white, /* Solid line */
+        6px 0 0 6px black, /* Gap at the end */
+        6px 0 0 6px white; /* Gap at the end */
+    }
+
+    .contact-title {
+      font-size: 24px;
+      font-weight: bold;
+      position: relative; /* Adjust position to overlap line */
+      z-index: 1; /* Ensure title is above the line */
+    }
+
+    .email-button {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #007bff; /* Change color as needed */
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      margin-top: 20px; /* Adjust margin as needed */
+    }
+
+    .email-address {
+      font-size: 14px; /* Adjust font size as needed */
+      margin-top: 5px; /* Adjust margin as needed */
+    }
+
+  </style>
+</head>
+<body>
+  <div class="name"></div>
+  <div class="title">Hi, I'm Aman </div>
+  <div class="image">
+    <img src="headshot.JPG" alt="Description of the image">
+  </div>
+  <div class="additional-section">
+    <div class="section-title">Computer Engineering</div>
+    <div class="sub-title">@ UMich</div>
+    <div class="buttons">
+      <a href="https://github.com/amansikka" class="button" target="_blank">
+        <img src="github.png" alt="GitHub Logo">
+      </a>
+      <a href="https://www.linkedin.com/in/aman-sikka-482923208/" class="button" target="_blank">
+        <img src="linkedin.png" alt="LinkedIn Logo">
+      </a>
+    </div>
+    <a href="#" class="oval-button">Download CV</a>
+  </div>  
+  <div class="section">
+    <a href="blog.html">Blog</a>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="#contact">Contact</a>
+  </div>
+  <div class="about-me">
+    <h1>About Me</h1>
+    <p>Hi I am Aman Sikka! I am currently a sophomore at the University of Michigan majoring in computer engineering. I have a strong interest in robotics, natural language processing, and computer vision. On this website you can find my blog, portfolio and contact information.</p>
+  </div>
+
+  <!-- Contact Me Section -->
+  <div class="contact-section" id="contact">
+    <div class="contact-title">Contact Me</div>
+    <a href="mailto:asikka@umich.edu" class="email-button">Send Email</a>
+    <div class="email-address">asikka@umich.edu</div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <style>
+        body {
+            font-family: 'Roboto Mono', monospace;
+            background-color: #000000;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 50px;
+        }
+        h1 {
+            font-size: 32px;
+            font-weight: bold;
+            color: white;
+        }
+        p {
+            color: white;
+            margin: 10px 0 20px;
+        }
+        .blog-post {
+            background-color: #1a1a1a; 
+            border: 3px solid white;
+            color: white;
+            width: 70%;
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 80px;
+            padding: 20px;
+            box-sizing: border-box;
+            box-shadow: 0px 4px 8px rgba(0,0,0,0.5);
+            transition: transform 0.3s ease; /* Smooth transition for transform */
+        }
+        .blog-post:hover {
+            transform: scale(1.05); /* Slightly increases size on hover */
+        }
+
+        .blog-image {
+            width: 150px;
+            height: auto;
+            margin-right: 20px;
+        }
+
+        .blog-content {
+            flex-grow: 1;
+            padding: 10px;
+        }
+        .blog-title {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+        .blog-description {
+            font-size: 16px;
+        }
+        
+        .back-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            padding: 10px 20px;
+            background-color: white;
+            color: black;
+            text-decoration: none;
+            font-size: 20px;
+            border-radius: 5px;
+        }
+        .back-button:hover {
+            background-color: #f0f0f0;
+        }
+        
+        a {
+            text-decoration: none; /* Ensures links have no underline */
+            color: inherit; /* Inherits text color from parent */
+        }
+    </style>
+</head>
+<body>
+    <a href="website.html" class="back-button">←</a>
+    <h1>Blog</h1>
+    <p>things I find cool</p>
+    <a href="posts.html" class="blog-post">
+        <img src="openELM.png" class="blog-image" alt="Blog Post Image">
+        <div class="blog-content">
+            <div class="blog-title">OpenELM: An Efficient Language Model Family with Open-source Training and Inference Framework</div>
+            <div class="blog-description">An article on OpenELM by Apple, a new open-source LLM family that achieves SOTA performance. It uses a layer-wise scaling to efficiently allocate parameters within each transformer layer.</div>
+        </div>
+    </a>
+    <a href="posts.html" class="blog-post">
+        <img src="thing.png" class="blog-image" alt="Blog Post Image">
+        <div class="blog-content">
+            <div class="blog-title">Anthropic releases research on "mapping the mind" of an LLM</div>
+            <div class="blog-description">Researchers at Anthropic have scaled sparse autoencoders to SOTA models in order to extract high quality features about the Claude 3 Sonnet model. They have shed a light on the black box of LLMs by creating Interpretable Features from the LLM.</div>
+        </div>
+    </a>
+    <a href="posts.html" class="blog-post">
+        <img src="meta.png" class="blog-image" alt="Blog Post Image">
+        <div class="blog-content">
+            <div class="blog-title">Multi-Token Prediction for Better and Faster LLM</div>
+            <div class="blog-description">Meta's new groundbreaking paper "Better & Faster Large Language Models via Multi-token Prediction" suggests that training language models to predict multiple future tokens at once results in higher sample efficiency.</div>
+        </div>
+    </a>
+</body>
+</html>
